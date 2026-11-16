@@ -2,6 +2,8 @@
 
 OSB is the parent folder for the system documents. The four layer folders follow the architecture described in `build-notes/BUILDLIST NOTES 1.md`.
 
+For the complete folder-and-file tree, including planned future slots, see [`STRUCTURE.md`](STRUCTURE.md).
+
 ## Layers
 
 1. **Source and friction maps** — `layer-1-source-friction-maps/`
