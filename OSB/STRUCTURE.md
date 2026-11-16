@@ -17,12 +17,28 @@ OSB/
 ├── STRUCTURE.md                                          [CONTENT] This map
 │
 ├── 00-grounding-vault/
+│   ├── SOURCE_REGISTER.md                                [CONTENT] Nine uploaded sources and checksums
 │   ├── raw-notes/
 │   │   └── 2025-06_DSM_Seminar_Notes.md                  [PLACEHOLDER] Source notes not present yet
 │   ├── external-standards/
 │   │   └── PLACEHOLDER_ISA_NOAA_IEC.md                   [PLACEHOLDER] Import actual source text later
+│   │   ├── ClassNK/
+│   │   │   ├── ClassNK_UR_E26_Rev1_Shipowner_Guidance_2026-06.pdf
+│   │   │   └── ClassNK_UR_E26_Rev1_Shipyard_Guidance_2026-06.pdf
+│   │   ├── CMI/
+│   │   │   ├── CMI_Documentation_1968_Volume_IV_Administration_Passengers_Containers_Torrey_Canyon.pdf
+│   │   │   └── CMI_MSC110_Remote_Operation_Centres_Survey.pdf
+│   │   ├── Conventions/
+│   │   │   └── Hague_Visby_Rules_1968_Brussels_Protocol_English_Japanese.pdf
+│   │   ├── IMO/
+│   │   │   ├── IMO_MSC.595(111)_MASS_Code_2026-05-21.pdf
+│   │   │   └── IMO_Status_of_Treaties_Volume_I_SOLAS_COLREG_MARPOL_2026-10-30.pdf
+│   │   └── UNCITRAL/
+│   │       └── UNCITRAL_Model_Law_Electronic_Transferable_Records.pdf
 │   └── case-law/
-│       └── PLACEHOLDER_EVER_SMART_PENN.md                [PLACEHOLDER] Import actual case-law text later
+│       ├── PLACEHOLDER_EVER_SMART_PENN.md                [PLACEHOLDER] Penn text still absent
+│       └── UKSC/
+│           └── UKSC_Evergreen_Marine_v_Nautical_Challenge_2021-02-19.pdf
 │
 ├── 01-osb-governance/
 │   ├── OSB_Ecosystem_Charter.md                          [PLACEHOLDER] Non-normative OSB framing
@@ -71,6 +87,7 @@ OSB/
 
 ### Grounding and governance
 
+- [Grounding-vault source register](00-grounding-vault/SOURCE_REGISTER.md)
 - [DSM seminar notes placeholder](00-grounding-vault/raw-notes/2025-06_DSM_Seminar_Notes.md)
 - [External standards placeholder](00-grounding-vault/external-standards/PLACEHOLDER_ISA_NOAA_IEC.md)
 - [Case-law placeholder](00-grounding-vault/case-law/PLACEHOLDER_EVER_SMART_PENN.md)

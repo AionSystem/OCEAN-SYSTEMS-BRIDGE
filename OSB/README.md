@@ -6,7 +6,7 @@ The full current tree, placeholders, and UCFS split notes are in [`STRUCTURE.md`
 
 ## Main areas
 
-- `00-grounding-vault/` — raw notes and source documents. Replace marked stubs only with actual source material.
+- `00-grounding-vault/` — raw notes and source documents. `SOURCE_REGISTER.md` tracks the nine uploaded PDFs, their original upload names, source metadata, and checksums.
 - `01-osb-governance/` — OSB ecosystem charter and domain registry scaffolds.
 - `build-notes/` — requirements for later work; not implemented by organizing this repo.
 - `layer-1-source-friction-maps/` — source maps by domain, with MASS material present and DSM marked as a placeholder.

@@ -1,5 +1,7 @@
 # ISA / NOAA / IEC Source Placeholder
 
-No external standards or source documents are stored here yet. Add the actual source files or faithful text extracts when available, with source title, version, retrieval date, and verification status.
+The vault now contains other issuer-grouped references. ISA, NOAA, and IEC source documents have not yet been added.
+
+When adding them, place each in an issuer-specific subfolder and record the title, version, source location, retrieval date, and review status in `../SOURCE_REGISTER.md`.
 
 This placeholder is not evidence of a source or of verification.
