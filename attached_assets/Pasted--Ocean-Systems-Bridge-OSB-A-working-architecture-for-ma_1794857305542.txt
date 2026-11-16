@@ -1,0 +1,147 @@
+# Ocean Systems Bridge (OSB)
+
+A working architecture for managing regulatory, scientific and operational friction across ocean domains where no single community has the whole picture.
+
+---
+
+## What this is
+
+Ocean Systems Bridge is a layered protocol stack that converts unamendable regulatory text, unsettled science, and competing institutional interests into **declared, bounded, testable and auditable claims**. It does not resolve uncertainty. It makes uncertainty visible, owned, and monitorable.
+
+The stack was first developed against Maritime Autonomous Surface Ships (MASS) and is now being generalized to deep-sea mining (ISA), pelagic ecology, and other ocean domains where science, technology, regulation, and industry intersect.
+
+## What this is not
+
+- Not a standard. Not an IMO instrument. Not a flag-State circular.
+- Not legal advice. Not a certification basis. Not an approval.
+- Not a substitute for Administration approval, class survey, or institutional process.
+- Not independently reviewed. All documents are development evidence produced by the same collaborator.
+- Not a compliance guarantee. No document in this repository establishes that any vessel, system, or operation complies with any instrument.
+
+---
+
+## Architecture
+
+OSB is organized as four technical layers under one governance umbrella. Each layer has a distinct role and MUST NOT perform the role of another layer.
+
+| Layer | Role | Current documents |
+|---|---|---|
+| **Layer 1 — Source & Friction Maps** | Maps the legal, scientific and regulatory friction. The only layer that touches primary source text. | MASS Regulatory Bridge (13 Nov 2026) |
+| **Layer 2 — Execution Pipeline** | Produces, tests, monitors and records claims at runtime. | ARCVB v0.1 |
+| **Layer 3 — Consensus Protocol** | The normative ruleset: claim model, gates, evidence tiers, non-waivable lists. Domain-neutral core + domain packs. | UCFS v0.3.1 (core); MASS-UCFS (domain pack); DSM-UCFS (in progress) |
+| **Layer 4 — Adoption** | Governs how the stack is presented, sequenced and negotiated across institutions. | IAAP v0.2.1 |
+
+**Governance (Layer 0):** The OSB governance folder holds the ecosystem charter, domain registry, and the rules by which new domain packs are added.
+
+### Domain Packs
+
+UCFS (Layer 3) separates a **stable core** from **domain-specific packs**:
+
+- **Core** (domain-neutral): claim statuses, compression types, gates G0–G6, evidence tiers E1–E4, `[P]` discipline, non-waivable mechanism, version lock. These do not change per domain.
+- **Domain packs**: each ocean problem domain plugs into the core with its own domains, non-waivables, evidence minimums, and friction map.
+
+| Domain Pack | Scope | Status |
+|---|---|---|
+| MASS-UCFS | Maritime Autonomous Surface Ships; COLREG, SOLAS, MARPOL, STCW, ISM/ISPS, national law | Active (v0.3.1) |
+| DSM-UCFS | Deep-sea mining; ISA Mining Code, benthic/pelagic baselines, plume dynamics, dark oxygen | In progress |
+| BIO-UCFS | Sargassum, pelagic ecology, multi-jurisdictional resource management | Stubbed |
+
+---
+
+## Repository Structure
+
+fill this in
+
+
+
+---
+
+## Key Concepts
+
+### The `[P]` Flag
+A clause marked `[P]` rests on a source whose verification status is not "verified against primary or official text." A `[P]` clause cannot support a conformance claim until cleared by one of two routes: (a) the submitter verifies the source and records a verification record, or (b) the approval authority accepts the `[P]` status in writing. See UCFS v0.3.1 §2.2.
+
+### Non-Waivable Domains
+Each domain pack declares a set of non-waivable domains — obligations that cannot be waived, compressed away, or bypassed by any approval, any Administration, or any framework. In MASS-UCFS these are NW-1 through NW-8. In DSM-UCFS they will be NW-O1 through NW-O5.
+
+### Bounded Claims
+Where an obligation cannot be fully closed on available evidence but can be controlled, the claim is **bounded**: it carries a threshold, a fallback state, a runtime monitor, an escalation route, and a re-open trigger. A bounded claim is not an open question. It is a controlled, monitored, declared limitation.
+
+### Runtime Monitors
+Every closed or bounded claim is bound to a runtime monitor. If the monitor detects a threshold breach, confidence-band breach, or claim violation, it raises an escalation event, records it in the audit ledger, and re-opens the claim. This is the mechanism by which approval-time claims stay true at runtime.
+
+### The Ledger
+The audit ledger is tamper-evident, investigator-usable, and append-only. It does not claim court admissibility. It claims integrity and usability. Its integrity method (hash chain, signed append-only log, or external timestamping) is declared per deployment.
+
+---
+
+## Status and Honesty
+
+- All documents in this repository are **drafts for technical review**.
+- No document has been independently reviewed, peer-reviewed, or endorsed by any Administration, recognized organization, classification society, or standards body.
+- The framework was developed with an AI collaborator. Under the framework's own reasoning (UCFS §25.3-type), this is development evidence, not independent corroboration.
+- No institution has been engaged via the IAAP protocol in a documented way. IAAP is proposed, not tested.
+- The MASS Regulatory Bridge's simulation (`rule_switching_demo.html`) uses placeholder parameters. It is seed-dependent and has not been validated against real traffic, real sensor data, or any Administration's requirements.
+
+---
+
+## Navigation Guide
+
+| If you are... | Start here |
+|---|---|
+| A regulator or Administration | `layer-3-consensus-protocol/UCFS_Core_v0.3.1.md` → §5 (Gates), §5.4 (Non-Waivables), Annex G (Audience Profiles) |
+| A classification society | `layer-3-consensus-protocol/UCFS_Core_v0.3.1.md` → §1.8 (Complementarity); `layer-4-adoption/IAAP_Core_v0.2.1.md` → §2.2.2 |
+| An autonomy developer or ROC provider | `layer-2-execution-pipeline/ARCVB_Core_v0.1.md` → §4.3 (Integration Modes), §5 (Subsystems) |
+| A maritime lawyer or insurer | `layer-3-consensus-protocol/UCFS_Core_v0.3.1.md` → §26 (Ledger), §21 (Liability); IAAP → §2.2.4 |
+| An ocean scientist | `layer-1-source-friction-maps/` → your domain; `00-grounding-vault/` |
+| A deep-sea mining stakeholder | `layer-1-source-friction-maps/DSM/`; `layer-3-consensus-protocol/domain-packs/DSM-UCFS/` |
+| New to the project | This README → `STRUCTURE.md` → `01-osb-governance/OSB_Ecosystem_Charter.md` |
+
+---
+
+## Conventions
+
+- **MUST, MUST NOT, SHOULD, SHOULD NOT, MAY** are used in the RFC 2119 sense.
+- **`[P]`** marks a clause resting on an unverified source (UCFS §2.2).
+- **Requirement IDs** follow the form `ARCVB-<area>-<nn>` (ARCVB), `UCFS §<clause>` (UCFS), `IAAP §<section>` (IAAP).
+- **Version discipline**: substantive revisions are gated to an annual cadence (UCFS §28.5). Defect corrections are recorded and dated, not subject to the cadence.
+- **No silent drops**: every revision carries a lineage declaration and a resolution log. Changes are recorded, not overwritten.
+
+---
+
+## Versioning
+
+| Document | Version | Date | Revision type |
+|---|---|---|---|
+| UCFS | v0.3.1 | 15 Nov 2026 | Defect correction (no operative clause changed) |
+| ARCVB | v0.1 | 14 Nov 2026 | Initial specification |
+| IAAP | v0.2.1 | 14 Nov 2026 | Defect correction and `[P]` evidence update |
+| MASS Regulatory Bridge | 13 Nov 2026 (corrected 14 Nov) | Working paper | Corrected version |
+| rule_switching_demo.html | — | 15 Nov 2026 | Illustrative simulation (headless-verified on fixed seeds) |
+
+---
+
+## Contact and Community
+
+OSB maintains a working community for practitioners at the intersection of ocean science, technology, regulation, industry, and policy. This is not an advocacy group. It is a working space for people who need better bridges.
+
+**What we value:**
+- Clear problem framing over slogans
+- Evidence and constraints over positioning
+- Practical interfaces that reduce unnecessary conflict
+- Honest acknowledgment of trade-offs
+
+If you work where these communities talk past each other, join to examine the friction and test better approaches. When you join, introduce your role and one interface problem you're working on.
+
+---
+
+## License and Use
+
+[To be declared. Not yet decided. See `01-osb-governance/OSB_Ecosystem_Charter.md` when populated.]
+
+No document in this repository may be cited as evidence of compliance with any instrument, as an IMO instrument, as a flag-State circular, as a classification-society rule, or as a basis for certification.
+
+---
+
+*Last updated: November 2026*
+

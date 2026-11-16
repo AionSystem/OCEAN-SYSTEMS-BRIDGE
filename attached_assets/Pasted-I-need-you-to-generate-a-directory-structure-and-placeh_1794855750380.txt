@@ -1,0 +1,58 @@
+I need you to generate a directory structure and placeholder files for a protocol architecture project called "Ocean Systems Bridge" (OSB). 
+
+Please create the following exact folder tree. For every `.md` file listed below, create the file and insert a standardized placeholder header so I can fill them in later. Do not write fake content; just use the headers provided.
+
+Directory Tree:
+OSB/
+├── README.md
+├── STRUCTURE.md
+├── 00-grounding-vault/
+│   ├── raw-notes/
+│   │   └── 2025-06_DSM_Seminar_Notes.md
+│   ├── external-standards/
+│   │   └── PLACEHOLDER_ISA_NOAA_IEC.md
+│   └── case-law/
+│       └── PLACEHOLDER_EVER_SMART_PENN.md
+├── 01-osb-governance/
+│   ├── OSB_Ecosystem_Charter.md
+│   └── Domain_Registry.md
+├── build-notes/
+│   └── BUILDLIST_NOTES_1.md
+├── demos/
+│   └── MASS/
+│       └── rule_switching_demo.html (create an empty file for this)
+├── layer-1-source-friction-maps/
+│   ├── MASS/
+│   │   ├── MASS_Regulatory_Bridge_13Nov2026.md
+│   │   ├── Bridge_13Nov2026_change_log.md
+│   │   └── versions/
+│   │       └── MASS_REGULATORY_BRIDGE_v0_6.md
+│   └── DSM/
+│       └── DSM_Friction_Map_v0.1.md
+├── layer-2-execution-pipeline/
+│   ├── ARCVB_Core_v0.1.md
+│   └── oracles/
+│       └── Oracle_Registry.md
+├── layer-3-consensus-protocol/
+│   ├── UCFS_Core_v0.3.1.md
+│   └── domain-packs/
+│       ├── MASS-UCFS/
+│       │   └── MASS_Domains_and_NWs.md
+│       ├── DSM-UCFS/
+│       │   └── DSM_Domains_and_NWs.md
+│       └── BIO-UCFS/
+│           └── BIO_Domains_Placeholder.md
+└── layer-4-adoption/
+    ├── IAAP_Core_v0.2.1.md
+    └── counterparties/
+        └── IAAP_Matrix_Extensions.md
+
+Placeholder Template for all .md files (except README/STRUCTURE):
+# [File Name]
+**Status:** [P] Placeholder / Awaiting Primary Text
+**Domain:** [OSB / MASS / DSM / BIO]
+**Layer:** [0 to 4]
+**Purpose:** [Brief 1-sentence description of what this file will hold]
+**Grounding Sources Required:** [List what needs to go in the 00-grounding-vault before this file can be written]
+
+Please execute this file creation now.
