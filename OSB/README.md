@@ -1,22 +1,18 @@
 # OSB Repository Map
 
-OSB is the parent folder for the system documents. The four layer folders follow the architecture described in `build-notes/BUILDLIST NOTES 1.md`.
+This repository is organized as the Ocean Systems Bridge (OSB) workspace, not as an application build.
 
-For the complete folder-and-file tree, including planned future slots, see [`STRUCTURE.md`](STRUCTURE.md).
+The full current tree, placeholders, and UCFS split notes are in [`STRUCTURE.md`](STRUCTURE.md). The attached layout has been adopted; placeholder files are scaffolding only and are not source material or completed specifications.
 
-## Layers
+## Main areas
 
-1. **Source and friction maps** — `layer-1-source-friction-maps/`
-   - `MASS/` contains the MASS Regulatory Bridge paper and its change log.
-   - `MASS/versions/` keeps the earlier standalone v0.6 draft separate.
-   - A DSM friction map is planned in the build notes; it has not been created.
-2. **Execution pipeline** — `layer-2-execution-pipeline/` contains ARCVB.
-3. **Consensus protocol** — `layer-3-consensus-protocol/` contains UCFS.
-4. **Adoption layer** — `layer-4-adoption/` contains IAAP.
+- `00-grounding-vault/` — raw notes and source documents. Replace marked stubs only with actual source material.
+- `01-osb-governance/` — OSB ecosystem charter and domain registry scaffolds.
+- `build-notes/` — requirements for later work; not implemented by organizing this repo.
+- `layer-1-source-friction-maps/` — source maps by domain, with MASS material present and DSM marked as a placeholder.
+- `layer-2-execution-pipeline/` — ARCVB and a future Oracle registry.
+- `layer-3-consensus-protocol/` — shared UCFS core, domain packs, and the unchanged full v0.3.1 source archive.
+- `layer-4-adoption/` — IAAP and future counterparty-matrix extensions.
+- `demos/` — demos grouped by domain.
 
-## Supporting material
-
-- `build-notes/` contains the build list for future work. Its requirements have not been implemented as part of this organization pass.
-- `demos/MASS/` contains the rule-switching HTML demo associated with the MASS material.
-
-Only file locations and repository navigation were changed; document contents were preserved.
+The UCFS core/domain split is editorial: the original section numbering and full source are preserved. It does not claim a new UCFS revision or independent verification.
